@@ -1,0 +1,52 @@
+{
+	"printvar": {
+		"prefix": "p",
+		"body": ["pri(f\"{$1 = }\")","$2"],
+		"description": "print variable"
+	},
+	"input list": {
+		"prefix": "li",
+		"body": "map(int, input().split())",
+		"description": "input list"
+	},
+	"input int": {
+		"prefix": "ii",
+		"body": "int(input())",
+		"description": "input int"
+	},
+	"testcase": {
+		"prefix": "t",
+		"body": [
+				"t = int(input())",
+				"for _ in range(t):"
+			],
+		"description": "test"
+	},
+	"array input":{
+		"prefix": "arr",
+		"body": "list(map(int, input().split()))",
+		"description": "input array"
+	},
+	"yn": {
+		"prefix": "yn",
+		"body": "print(\"Yes\" if $1 else \"No\")",
+		"description": "yn"
+	},
+	"intro": {
+		"prefix": "intro",
+		"body": [
+			"# In the name of Allah",
+			"# Tasnim Jabir",
+			"",
+			"import sys",
+			"input = sys.stdin.readline",
+			"",
+			"debug = True",
+			"pri = lambda *a, **k: None",
+			"if debug:",
+			"\timport builtins",
+			"\tpri = builtins.print"
+		],
+		"description": "intro"
+	}
+}
