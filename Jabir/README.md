@@ -34,7 +34,7 @@
 
 Input Output Guide for Codeforces [here](Codeforces_Guide/cf_io_guide.md), example [here](Codeforces_Guide/io_examples.py).
 
-You can use my Codeforces_Snippet, download this [here](../Codeforces_Snippet\python.json), see sample [here](../Codeforces_Snippet/Sample.py).
+You can use my Codeforces_Snippet, download this [here](../Codeforces_Snippet/python.json), see sample [here](../Codeforces_Snippet/Sample.py).
 
 ---
 
