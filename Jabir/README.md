@@ -146,7 +146,7 @@ Div 1+2:
 
 
 <details>
-  <summary>All Problems</summary>
+  <summary> ---------- All Problems -------------</summary>
 
 ### 🔰 Section 1 — Select
 
@@ -169,8 +169,8 @@ Div 1+2:
 | 10 | Average Time of Process per Machine | 🟢 Easy | - [x] |
 | 11 | Employee Bonus | 🟢 Easy | - [x] |
 | 12 | Students and Examinations | 🟢 Easy | - [x] |
-| 13 | Managers with at Least 5 Direct Reports | 🟡 Medium | - [ ] |
-| 14 | Confirmation Rate | 🟡 Medium | - [ ] |
+| 13 | Managers with at Least 5 Direct Reports | 🟡 Medium | - [x] |
+| 14 | Confirmation Rate | 🟡 Medium | - [x] |
 
 ### 📊 Section 3 — Basic Aggregate Functions
 
@@ -236,6 +236,8 @@ Div 1+2:
 ---
 
 </details>
+
+---
 
 ### 💡 Key Pandas Skills Being Practiced
 
