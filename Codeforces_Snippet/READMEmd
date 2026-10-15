@@ -1,0 +1,52 @@
+# Python Competitive Programming Snippets
+
+VS Code snippets for fast competitive programming in Python.
+
+## Snippets
+
+| Prefix | Description | Expands to |
+|--------|-------------|------------|
+| `intro` | Boilerplate header | Imports, fast input, conditional debug printer |
+| `t` | Test case loop | makes `for _ in range(t)` |
+| `ii` | Integer input | `int(input())` |
+| `li` | List of ints (space-sep) | `map(int, input().split())` |
+| `arr` | Array input | `list(map(int, input().split()))` |
+| `p` | Print variable (debug) | `pri(f"{var = }")` — uses the debug-aware `pri` |
+| `yn` | Yes/No output | `print("Yes" if <cond> else "No")` |
+
+## Usage
+
+### Setup
+Copy the JSON into your VS Code Python snippets file:
+**File → Preferences → Configure User Snippets → Python**
+
+### Typical contest file
+
+```python
+# In the name of Allah
+# Tasnim Jabir
+
+import sys
+input = sys.stdin.readline
+
+debug = True
+pri = lambda *a, **k: None
+if debug:
+    import builtins
+    pri = builtins.print
+
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    arr = list(map(int, input().split()))
+    # ...
+    print("Yes" if n > 0 else "No")
+```
+
+### Debug printing
+The `intro` snippet sets up a `pri()` function that prints only when `debug = True`. Set it to `False` before submitting — no output leaks, no manual cleanup needed.
+
+```python
+x = 42
+pri(f"{x = }")   # prints: x = 42   (only if debug=True)
+```
