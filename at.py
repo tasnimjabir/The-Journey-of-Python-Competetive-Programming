@@ -58,3 +58,49 @@ print(int(p))
 
 s = "12sam"
 print(s[2])
+
+#greedy approach - failed
+S = input()
+i = 0
+while i < len(S):
+    if S[i] == "d":
+        if S[i:i+7]=="dreamer":
+            i+=7
+        elif S[i:i+5]=="dream":
+            i+=5
+        else :
+            print("NO")
+            exit()
+    if S[i]== "e":
+        if S[i:i+6]=="eraser":
+            i+=6
+        elif S[i:i+5]=="erase":
+            i+=5
+        else:
+            print("NO")
+            exit()
+    else : 
+        print("NO")
+        exit()
+print("YES")
+
+# DP Solution AtCode(Daydream)
+s = input()
+while s:
+    if s.endswith("dreamer"):
+        s = s[0:len(s)-7]
+    elif s.endswith("eraser"):
+        s = s[ :-6]
+    elif s.endswith("dream"):
+        s = s[ :-5]
+    elif s.endswith("erase"):
+        s=s[ :-5]
+    else:
+        print("NO")
+        exit()
+
+print("YES")
+
+
+# Day - 4
+
