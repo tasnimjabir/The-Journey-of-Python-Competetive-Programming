@@ -101,6 +101,18 @@ while s:
 
 print("YES")
 
+#B-ATCoder  ACGT
+S = input()
+t = 'ACGT'
+cout = 0
+res = 0
+for r in range(len(S)):
+    if S[r] in t:
+        cout += 1
+    else: cout = 0
+    res = max(res, cout)
+print(res)
+    
 
 # Day - 4
 
