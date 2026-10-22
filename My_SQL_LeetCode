@@ -1,0 +1,45 @@
+Distinct - get rid of duplicate
+as - to show output with custom name
+CHAR_LENGTH(content) - count num. of char
+
+-- INNER JOIN: Returns rows with matching values in BOTH tables.
+-- Use case: Strict data integrity, filtering out orphaned records.
+SELECT * FROM TableA
+INNER JOIN TableB ON TableA.id = TableB.a_id;
+
+-- LEFT JOIN (LEFT OUTER JOIN): Returns ALL rows from the LEFT table,
+-- and matched rows from the RIGHT. Unmatched right-side columns are NULL.
+-- Use case: Finding missing dependencies or preserving the primary dataset.
+SELECT * FROM TableA
+LEFT JOIN TableB ON TableA.id = TableB.a_id;
+
+-- RIGHT JOIN (RIGHT OUTER JOIN): Returns ALL rows from the RIGHT table,
+-- and matched rows from the LEFT. Unmatched left-side columns are NULL.
+-- Use case: Rarely used; functionally identical to swapping tables in a LEFT JOIN.
+SELECT * FROM TableA
+RIGHT JOIN TableB ON TableA.id = TableB.a_id;
+
+-- FULL JOIN (FULL OUTER JOIN): Returns ALL rows when there is a match
+-- in EITHER table. Unmatched sides are NULL.
+-- Use case: Reconciliation of two datasets to find all gaps and overlaps.
+-- Note: Not supported in MySQL; requires UNION of LEFT and RIGHT in some dialects.
+SELECT * FROM TableA
+FULL JOIN TableB ON TableA.id = TableB.a_id;
+
+-- CROSS JOIN: Returns the Cartesian product (every row of A paired with every row of B).
+-- Use case: Generating test data permutations or combinatorial analysis.
+-- Warning: Performance risk (O(n*m)) without careful filtering.
+SELECT * FROM TableA
+CROSS JOIN TableB;
+
+-- SELF JOIN: A standard join where a table is joined with itself.
+-- Use case: Hierarchical data (e.g., Employee -> Manager) or comparative row analysis.
+SELECT e1.name, e2.manager_name
+FROM Employees e1
+JOIN Employees e2 ON e1.manager_id = e2.id;
+
+-- NATURAL JOIN: Automatically joins on columns with the SAME name.
+-- Warning: High risk of accidental schema coupling. Avoid in production code.
+SELECT * FROM TableA
+NATURAL JOIN TableB;
+
